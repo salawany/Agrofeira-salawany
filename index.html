@@ -1,44 +1,122 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>AgroFeira Paragominas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroFeira - Início</title>
 </head>
 
 <body>
 
-<header>
-    <h1>Bem-vindo à AgroFeira Paragominas!</h1>
+    <a href="#conteudo" class="pular">Pular para o conteúdo</a>
 
-    <nav>
-        <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#produtos">Produtos</a></li>
-        </ul>
-    </nav>
-</header>
+    <header class="cabecalho-site">
+        <h1>AgroFeira</h1>
 
-<main>
+        <nav aria-label="Principal">
+            <ul class="menu">
+                <li><a href="index.html" aria-current="page">Início</a></li>
+                <li><a href="safra.html">Safra</a></li>
+                <li><a href="cadastro-produtor.html">Cadastro do produtor</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h2 id="sobre">Sobre</h2>
+    <main id="conteudo">
 
-    <p>
-        A AgroFeira Paragominas reúne produtores locais e consumidores.
-    </p>
+        <section>
+            <h2 id="feira">Conheça a AgroFeira</h2>
 
-    <h2 id="produtos">Produtos</h2>
+            <p>
+                A AgroFeira reúne produtores locais e oferece produtos
+                frescos para a comunidade. É um espaço para valorizar
+                a produção da região e aproximar produtores e consumidores.
+                <strong>Participe e conheça os produtos da nossa feira!</strong>
+            </p>
 
-    <ul>
-        <li>Açaí - litro</li>
-        <li>Farinha - kg</li>
-        <li>Castanha - kg</li>
-    </ul>
+            <figure class="figura-destaque">
+                <picture>
+                    <source media="(min-width: 800px)" srcset="feira-1280.jpg">
+                    <img src="feira-330.jpg"
+                         width="330"
+                         height="247"
+                         alt="Feira com barracas e produtos agrícolas">
+                </picture>
 
-</main>
+                <figcaption>
+                    Feira de produtores locais.
+                    Foto: Rayelle da Silva Freitas, CC BY-SA 4.0, via Wikimedia Commons.
+                </figcaption>
+            </figure>
 
-<footer>
-    <p>AgroFeira Paragominas</p>
-</footer>
+            <p>
+                <a href="#produtos">Veja os produtos disponíveis</a>
+            </p>
+
+            <form class="busca" action="">
+                <label for="campo">Procurar produto</label>
+                <input type="search" id="campo" name="campo">
+
+                <button type="submit">
+                    <img src="lupa.png" width="40" height="40"
+                         alt="Procurar">
+                </button>
+            </form>
+        </section>
+
+        <section>
+            <h2 id="produtos">Produtos da feira</h2>
+
+            <ul class="lista-produtos">
+
+                <li class="cartao-produto">
+                    <strong>Mandioca</strong> — saca de 60 kg
+                </li>
+
+                <li class="cartao-produto">
+                    <strong>Banana-prata</strong> — cacho
+                </li>
+
+                <li class="cartao-produto">
+                    <strong>Açaí</strong> — rasa
+                </li>
+
+                <li class="cartao-produto">
+                    <strong>Pimenta-do-reino</strong> — quilo
+                </li>
+
+                <li class="cartao-produto">
+                    <strong>Cupuaçu</strong> — quilo
+                </li>
+
+                <li class="cartao-produto">
+                    <strong>Alface</strong> — maço
+                </li>
+
+            </ul>
+
+            <div class="aviso">
+                <p>
+                    Os preços podem mudar toda semana.
+                    <strong>Confira os valores antes de comprar.</strong>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <aside>
+        <h2>Informações da feira</h2>
+        <p>Endereço: Praça Central da cidade.</p>
+        <p>Horário: aos sábados, das 7h às 12h.</p>
+    </aside>
+
+    <footer class="rodape-site">
+        <p>AgroFeira — valorizando os produtores locais.</p>
+    </footer>
 
 </body>
 </html>
+```
