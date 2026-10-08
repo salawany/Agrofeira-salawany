@@ -117,6 +117,7 @@ img {
   border-radius: var(--raio);
   box-shadow: var(--sombra);
   padding: var(--espaco-2);
+  max-width: 40rem;
 }
 
 /* Aviso */
@@ -126,6 +127,7 @@ img {
   border-radius: var(--raio);
   padding: var(--espaco-2);
   margin-top: var(--espaco-3);
+  max-width: 65ch;
 }
 
 /* Busca */
