@@ -1,0 +1,32 @@
+/* Caso 1 */
+/* Previsão: .aviso strong vence porque tem especificidade maior (0,1,1) do que strong (0,0,1). O texto ficará com a cor de --cor-marca. */
+/* Conferido: resultado observado conforme a previsão. */
+.aviso strong {
+  color: var(--cor-marca);
+}
+
+strong {
+  color: var(--cor-texto-suave);
+}
+
+/* Caso 2 */
+/* Previsão: há empate de especificidade entre .busca label (0,1,1) e label[for] (0,1,1). Como label[for] aparece depois, ela vence pela ordem da declaração. O texto ficará com --cor-texto-suave. */
+/* Conferido: resultado observado conforme a previsão. */
+.busca label {
+  color: var(--cor-marca);
+}
+
+label[for] {
+  color: var(--cor-texto-suave);
+}
+
+/* Caso 3 */
+/* Previsão: .rodape-site vence porque tem especificidade maior (0,1,0) do que footer p (0,0,2). Portanto, o rodapé ficará com --cor-marca. */
+/* Conferido: resultado observado conforme a previsão. */
+.rodape-site {
+  color: var(--cor-marca);
+}
+
+footer p {
+  color: var(--cor-texto);
+}
