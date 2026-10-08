@@ -1,7 +1,7 @@
 :root {
    /* Cores */
 --cor-fundo: #E8DFD0;
---cor-superficie: #FFFDF8;
+--cor-superficie: #FFFDF8; /* 16.21:1 com --cor-texto — AA */
 --cor-texto: #1F1F1F; /* 12.48:1 sobre --cor-fundo — AA */
 --cor-texto-suave: #625B52; /* 6.58:1 sobre --cor-superficie — AA */
 --cor-marca: #5A3E2B; /* 9.57:1 sobre --cor-superficie — AA */
