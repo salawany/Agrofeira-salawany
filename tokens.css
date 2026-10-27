@@ -1,31 +1,44 @@
-:root {
-   /* Cores */
---cor-fundo: #E8DFD0;
---cor-superficie: #FFFDF8; /* 16.21:1 com --cor-texto — AA */
---cor-texto: #1F1F1F; /* 12.48:1 sobre --cor-fundo — AA */
---cor-texto-suave: #625B52; /* 6.58:1 sobre --cor-superficie — AA */
---cor-marca: #5A3E2B; /* 9.57:1 sobre --cor-superficie — AA */
---cor-sobremarca: #FFFFFF; /* 9.73:1 sobre --cor-marca — AA */
---cor-borda: #B9AA98;
 
-  /* Fonte */
---fonte-texto: Arial, sans-serif;
---fonte-titulo: "Arimo", sans-serif;
+@layer base {
+  :root {
+    /* Cores */
+    --cor-fundo: #E8DFD0;
+    --cor-superficie: #FFFDF8; /* 16.21:1 com --cor-texto — AA */
+    --cor-texto: #1F1F1F; /* 12.48:1 sobre --cor-fundo — AA */
+    --cor-texto-suave: #625B52; /* 6.58:1 sobre --cor-superficie — AA */
+    --cor-marca: #5A3E2B; /* 9.57:1 sobre --cor-superficie — AA */
+    --cor-marca-forte: #402B1D;
+    --cor-marca-rgb: 90, 62, 43; /* Cópia de --cor-marca */
+    --cor-marca-forte-rgb: 64, 43, 29; /* Cópia de --cor-marca-forte */
+    --cor-sobremarca: #FFFFFF; /* 9.73:1 sobre --cor-marca — AA */
+    --cor-borda: #B9AA98;
 
-   /* Tamanhos */
-   /* Multiplicador escolhido: 1.25 */
---tamanho-texto: 1rem;
---tamanho-h3: 1.25rem;
---tamanho-h2: 1.563rem;
---tamanho-h1: 1.954rem;
+    /* Fonte */
+    --fonte-texto: Arial, sans-serif;
+    --fonte-titulo: "Arimo", sans-serif;
 
-  /* Espaçamentos */
---espaco-1: 0.5rem;
---espaco-2: 1rem;
---espaco-3: 1.5rem;
---espaco-4: 2rem;
+    /* Tamanhos */
+    /* Multiplicador escolhido: 1.25 */
+    --tamanho-texto: 1rem;
+    --tamanho-h3: 1.25rem;
+    --tamanho-h2: 1.563rem;
+    --tamanho-h1: 1.954rem;
 
- /* Outros */
---raio: 8px;
---sombra: 0 2px 6px rgb(0 0 0 / 15%);
+    /* Espaçamentos */
+    --espaco-1: 0.5rem;
+    --espaco-2: 1rem;
+    --espaco-3: 1.5rem;
+    --espaco-4: 2rem;
+
+    /* Outros */
+    --raio: 8px;
+    --sombra: 0 2px 6px rgb(0 0 0 / 15%);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --cor-marca-rgb: 90, 62, 43; /* Cópia de --cor-marca */
+      --cor-marca-forte-rgb: 64, 43, 29; /* Cópia de --cor-marca-forte */
+    }
+  }
 }

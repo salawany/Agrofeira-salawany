@@ -1,0 +1,176 @@
+
+@layer componentes {
+
+  
+  .pagina-catalogo > nav[aria-label="Principal"] {
+    background-color: var(--cor-marca);
+    padding: var(--espaco-2);
+  }
+
+  .pagina-catalogo > nav[aria-label="Principal"] .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--espaco-2);
+  }
+
+  .pagina-catalogo > nav[aria-label="Principal"] .menu li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .pagina-catalogo > nav[aria-label="Principal"] .menu a {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    color: var(--cor-sobremarca);
+    text-decoration: none;
+    line-height: 1.4;
+  }
+
+  .pagina-catalogo > nav[aria-label="Principal"] .menu a[aria-current="page"] {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  /* Estrutura do catálogo */
+  .pagina-catalogo main,
+  .pagina-catalogo .lateral {
+    min-width: 0;
+  }
+
+  .pagina-catalogo .barra-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaco-1);
+    list-style: none;
+    padding: 0;
+    margin: var(--espaco-2) 0 var(--espaco-3);
+  }
+
+  .pagina-catalogo .barra-categorias button {
+    font: inherit;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    background: var(--cor-superficie);
+    color: var(--cor-texto);
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+  }
+
+  .pagina-catalogo .lista-produtos {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pagina-catalogo .cartao-produto {
+    min-width: 0;
+    max-width: none;
+  }
+
+  .pagina-catalogo .cartao-produto img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: calc(var(--raio) / 2);
+  }
+
+  .pagina-catalogo .cartao-produto h3 {
+    margin-top: var(--espaco-2);
+  }
+
+  .pagina-catalogo .produtor {
+    color: var(--cor-texto-suave);
+  }
+
+  .pagina-catalogo .preco {
+    font-weight: bold;
+  }
+
+  .pagina-catalogo .cartao-produto button {
+    font: inherit;
+    border: 1px solid var(--cor-marca);
+    border-radius: var(--raio);
+    background: var(--cor-marca);
+    color: var(--cor-sobremarca);
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+
+    
+  }
+
+  /* Tablet */
+  @media (min-width: 40rem) {
+    .pagina-catalogo .lista-produtos {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pagina-catalogo .cartao-produto.destaque {
+      grid-column: 1 / -1;
+    }
+
+    .pagina-catalogo .cartao-produto.destaque article {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: var(--espaco-2);
+      align-items: center;
+    }
+
+    .pagina-catalogo .cartao-produto.destaque img {
+      grid-row: span 4;
+    }
+  }
+
+  /* Telas grandes */
+  @media (min-width: 64rem) {
+    .pagina-catalogo {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(15rem, 20rem);
+      column-gap: var(--espaco-3);
+    }
+
+    .pagina-catalogo > .cabecalho-site,
+    .pagina-catalogo > nav,
+    .pagina-catalogo > .rodape-site {
+      grid-column: 1 / -1;
+    }
+
+    .pagina-catalogo > main {
+      min-width: 0;
+    }
+
+    .pagina-catalogo > .lateral {
+      padding: var(--espaco-3);
+    }
+
+    .pagina-catalogo > .lateral .lista-produtos {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  /* Foco visível para teclado */
+  .pagina-catalogo a:focus-visible,
+  .pagina-catalogo button:focus-visible {
+    outline: 3px solid var(--cor-marca);
+    outline-offset: 3px;
+  }
+
+  /* Destaca o cartão que contém o foco */
+  .pagina-catalogo .cartao-produto:has(button:focus-visible) {
+    outline: 3px solid var(--cor-marca);
+    outline-offset: 3px;
+  }
+
+  /* Preferência de tema escuro do sistema */
+  @media (prefers-color-scheme: dark) {
+    .pagina-catalogo {
+      --cor-fundo: #201c18;
+      --cor-superficie: #302922;
+      --cor-texto: #f7f1e9;
+      --cor-texto-suave: #d1c4b6;
+      --cor-marca: #e0b995;
+      --cor-sobremarca: #201c18;
+      --cor-borda: #786756;
+    }
+  }
+}

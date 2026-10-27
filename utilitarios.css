@@ -1,0 +1,14 @@
+
+@layer utilitarios {
+  .largura-total {
+    width: 100%;
+  }
+
+  .texto-centralizado {
+    text-align: center;
+  }
+
+  .oculto {
+    display: none;
+  }
+}
