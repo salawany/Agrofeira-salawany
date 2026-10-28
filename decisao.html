@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroFeira - Registro de decisão</title>
+    <title>AgroFeira - Registro de decisão - Sávila Sousa</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,8 +36,8 @@
 
         <h2>Aula 6 — o registro de decisão</h2>
 
-        <p><strong>Nome completo:</strong> [Digite seu nome completo]</p>
-        <p><strong>Matrícula:</strong> [Digite sua matrícula]</p>
+        <p><strong>Nome completo:</strong> Sávila Lawany Leite de Sousa</p>
+        <p><strong>Matrícula:</strong> 2024008920</p>
 
         <p>
             <strong>Repositório:</strong>
@@ -66,15 +66,13 @@
             <h3 id="correcoes">1. As correções de acessibilidade</h3>
 
             <p>
-                Esta tabela registra os problemas identificados durante a
-                análise do código, a forma como foram detectados, as
-                alterações realizadas e os locais em que elas foram aplicadas.
+                Esta tabela registra as correções de acessibilidade realizadas
+                no catálogo e no formulário, como os problemas foram detectados
+                e onde as alterações foram aplicadas no código.
             </p>
 
             <table class="tabela-safra">
-                <caption>
-                    Registro das correções de acessibilidade
-                </caption>
+                <caption>Registro das correções de acessibilidade</caption>
 
                 <thead>
                     <tr>
@@ -87,31 +85,77 @@
 
                 <tbody>
                     <tr>
-                        <th scope="row">Primeira correção da atividade</th>
-                        <td>[Descreva o problema encontrado no passo 3.]</td>
-                        <td>[Descreva a alteração realizada.]</td>
-                        <td>[Informe o arquivo e o elemento.]</td>
+                        <th scope="row">Nome acessível do botão do menu</th>
+                        <td>
+                            A verificação do painel Accessibility permitiu
+                            conferir o nome acessível do botão.
+                        </td>
+                        <td>
+                            Foi adicionado aria-label="Menu" ao botão
+                            que abre e fecha a navegação.
+                        </td>
+                        <td>
+                            catalogo-bootstrap.html — botão navbar-toggler
+                        </td>
                     </tr>
 
                     <tr>
-                        <th scope="row">Segunda correção da atividade</th>
-                        <td>[Descreva o problema encontrado no passo 4.]</td>
-                        <td>[Descreva a alteração realizada.]</td>
-                        <td>[Informe o arquivo e o elemento.]</td>
+                        <th scope="row">Nome acessível do botão de fechar</th>
+                        <td>
+                            A verificação do painel Accessibility permitiu
+                            conferir o nome acessível do botão de fechar.
+                        </td>
+                        <td>
+                            Foi adicionado aria-label="Fechar" ao botão
+                            que fecha o diálogo.
+                        </td>
+                        <td>
+                            catalogo-bootstrap.html — botão de fechar
+                            do modal
+                        </td>
                     </tr>
 
                     <tr>
-                        <th scope="row">Terceira correção da atividade</th>
+                        <th scope="row">Nível do título do diálogo</th>
                         <td>
-                            Foi verificada a associação entre os campos
-                            obrigatórios do formulário e suas mensagens.
+                            A documentação do componente modal foi consultada
+                            para verificar a marcação recomendada para seu título.
                         </td>
                         <td>
-                            Foram utilizados identificadores nas mensagens
-                            e o atributo aria-describedby nos campos.
+                            O título do diálogo foi marcado com o elemento h2.
                         </td>
                         <td>
-                            checkout-bootstrap.html
+                            catalogo-bootstrap.html — título do modal
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Identificação do diálogo</th>
+                        <td>
+                            A validação da marcação foi utilizada para verificar
+                            a identificação semântica do diálogo.
+                        </td>
+                        <td>
+                            Foi adicionado role="dialog" ao elemento
+                            que representa o modal.
+                        </td>
+                        <td>
+                            catalogo-bootstrap.html — elemento modal
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Associação entre campos e mensagens</th>
+                        <td>
+                            No painel Accessibility, foi conferida a associação
+                            entre o campo de e-mail e sua mensagem descritiva.
+                        </td>
+                        <td>
+                            As mensagens receberam identificadores e os campos
+                            foram associados a elas com aria-describedby.
+                        </td>
+                        <td>
+                            checkout-bootstrap.html — campos do formulário
                         </td>
                     </tr>
                 </tbody>
@@ -121,18 +165,20 @@
 
             <ul>
                 <li>
-                    O foco do teclado permanece no botão após uma tentativa
-                    de envio com erros; conduzi-lo ao primeiro campo inválido
-                    exige JavaScript.
+                    Após o envio do formulário com erros, o foco permanece
+                    no botão. Levar o foco ao primeiro campo inválido exige
+                    JavaScript.
                 </li>
                 <li>
-                    O diálogo de detalhes foi implementado para o produto
-                    Açaí médio; exibir informações diferentes para cada
-                    produto exige adaptação do comportamento.
+                    O diálogo de detalhes apresenta o produto Açaí médio.
+                    Mostrar informações diferentes para cada produto exige
+                    adaptar o conteúdo e o comportamento do diálogo.
                 </li>
                 <li>
-                    A associação de aria-describedby mantém a descrição
-                    vinculada ao campo mesmo quando ele está válido.
+                    O aria-describedby mantém a descrição associada ao campo
+                    mesmo quando ele está válido. Uma solução que atualize
+                    a descrição conforme o estado do campo exigiria
+                    comportamento adicional.
                 </li>
             </ul>
         </section>
@@ -142,81 +188,106 @@
 
             <h4>Contexto</h4>
             <p>
-                A AgroFeira precisa definir como será feita a estilização
-                das próximas páginas e componentes. A escolha deve considerar
-                o trabalho de manutenção, a quantidade de código, o desempenho
-                e a acessibilidade. No comparativo da atividade anterior,
-                o CSS próprio apresentou [INSIRA O DADO MEDIDO], enquanto
-                o Bootstrap apresentou [INSIRA O DADO MEDIDO]. O arquivo
-                JavaScript do Bootstrap teve peso de [INSIRA O VALOR MEDIDO],
-                e os testes sem JavaScript mostraram limitações no menu,
-                no diálogo e na validação do formulário.
+                A AgroFeira precisa definir como serão estilizadas as próximas
+                páginas e componentes, considerando manutenção, desempenho
+                e acessibilidade. Foram desenvolvidas páginas com CSS próprio
+                e páginas de teste com Bootstrap. Na medição do arquivo
+                JavaScript do Bootstrap, a resposta apresentou 24.469 bytes,
+                aproximadamente 24,5 kB. Sem JavaScript, o menu retrátil
+                e o diálogo do catálogo deixam de funcionar, e a validação
+                personalizada do formulário também deixa de funcionar.
+                O comparativo numérico entre o CSS próprio e o Bootstrap
+                precisa ser recuperado para completar essa análise.
             </p>
 
             <h4>Opções consideradas</h4>
             <ul>
                 <li>
                     <strong>Folha de estilo autoral:</strong>
-                    permite maior controle sobre o visual e as classes
-                    utilizadas, mas exige escrever e manter mais regras CSS.
+                    permite controlar a aparência e reutilizar os tokens
+                    visuais da AgroFeira. Em contrapartida, exige escrever,
+                    testar e manter as próprias regras CSS.
                 </li>
                 <li>
                     <strong>Bootstrap:</strong>
-                    oferece componentes e estilos prontos, mas a interatividade
-                    de alguns componentes depende de JavaScript adicional.
+                    oferece componentes e estilos prontos, o que agiliza
+                    a montagem das interfaces. Porém, o menu retrátil
+                    e o modal dependem de JavaScript, cujo arquivo medido
+                    apresentou 24.469 bytes transferidos.
                 </li>
                 <li>
                     <strong>Tailwind CSS:</strong>
-                    utiliza classes utilitárias diretamente na marcação,
-                    oferecendo flexibilidade, mas pode aumentar a quantidade
-                    de classes no HTML.
+                    permite compor a aparência usando classes utilitárias
+                    diretamente no HTML. Em contrapartida, pode deixar
+                    a marcação extensa e exige conhecer e organizar
+                    as classes utilizadas. A documentação oficial apresenta
+                    essa abordagem baseada em utilitários.
                 </li>
             </ul>
 
             <h4>Decisão</h4>
             <p>
-                [Escreva aqui qual das três opções você escolhe para a
-                continuidade da AgroFeira e explique sua decisão com base
-                nos dados que mediu. Se escolher Bootstrap, informe se
-                utilizará também o JavaScript ou somente o CSS.]
+                Escolho manter a folha de estilo autoral como abordagem
+                principal da AgroFeira, reutilizando os arquivos de CSS
+                e os tokens já existentes. Essa opção permite preservar
+                a identidade visual do projeto e controlar diretamente
+                as regras de apresentação. Para as próximas páginas,
+                pretendo priorizar componentes próprios e avaliar cada
+                necessidade antes de adicionar uma dependência externa.
             </p>
 
             <h4>Consequências aceitas</h4>
             <ul>
                 <li>
-                    [Registre um custo ou uma limitação que você aceita
-                    ao fazer sua escolha.]
+                    Aceito dedicar mais tempo à criação, aos testes e
+                    à manutenção das regras CSS, pois não terei todos
+                    os componentes prontos de uma biblioteca.
                 </li>
                 <li>
-                    [Registre uma segunda consequência coerente com
-                    a opção escolhida.]
+                    Aceito ter de implementar e testar separadamente
+                    os comportamentos interativos necessários, verificando
+                    também a navegação por teclado e a acessibilidade.
+                </li>
+                <li>
+                    Aceito revisar as regras compartilhadas quando novas
+                    páginas forem adicionadas, para manter a consistência
+                    visual do site.
                 </li>
             </ul>
 
             <h4>O que me faria mudar de ideia</h4>
             <p>
-                [Indique um fato que poderia levar você a reconsiderar
-                a decisão, como uma mudança nos resultados de desempenho,
-                um problema de manutenção ou uma limitação técnica.]
+                Eu reconsideraria essa escolha se a manutenção das regras
+                próprias passasse a exigir muito mais tempo do que a
+                utilização de uma biblioteca, ou se uma comparação prática
+                demonstrasse uma diferença relevante de desempenho e
+                acessibilidade em favor de outra abordagem. Para isso,
+                compararia as mesmas páginas, nas mesmas condições,
+                e registraria os resultados antes de mudar a decisão.
             </p>
 
             <h4>Fontes</h4>
             <ul>
                 <li>
                     Bootstrap. Documentação oficial, versão 5.3.
-                    Consulte a seção relacionada aos componentes e à
-                    utilização de JavaScript:
+                    Seções Getting started e Components. Disponível em:
                     <a href="https://getbootstrap.com/docs/5.3/">
                         documentação do Bootstrap 5.3
                     </a>.
+                    Acesso em 28 out. 2026.
                 </li>
                 <li>
-                    [Inclua uma obra da bibliografia da disciplina,
-                    com autor, título e capítulo ou tema consultado.]
+                    Grant, Keith J. <em>CSS in Depth</em>.
+                    Obra indicada na bibliografia da disciplina para
+                    aprofundamento sobre CSS e organização de estilos.
                 </li>
                 <li>
-                    [Inclua a fonte oficial do Tailwind CSS utilizada
-                    na aula, com a página ou seção consultada.]
+                    Tailwind CSS. Documentação oficial.
+                    Seção Utility-First Fundamentals. Disponível em:
+                    <a href="https://tailwindcss.com/docs/styling-with-utility-classes">
+                        documentação sobre classes utilitárias
+                    </a>.
+                    Acesso em 28 out. 2026.
                 </li>
             </ul>
         </section>
