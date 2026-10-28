@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroFeira - Registro de decisão</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <a href="#conteudo" class="pular">Pular para o conteúdo</a>
+
+    <header class="cabecalho-site">
+        <h1>AgroFeira</h1>
+
+        <nav aria-label="Principal">
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="safra.html">Safra</a></li>
+                <li><a href="cadastro-produtor.html">Cadastro do produtor</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo">
+
+        <h2>Aula 6 — o registro de decisão</h2>
+
+        <p><strong>Nome completo:</strong> [Digite seu nome completo]</p>
+        <p><strong>Matrícula:</strong> [Digite sua matrícula]</p>
+
+        <p>
+            <strong>Repositório:</strong>
+            <a href="https://github.com/salawany/Agrofeira-salawany">
+                AgroFeira no GitHub
+            </a>
+        </p>
+
+        <p>
+            <strong>Site publicado:</strong>
+            <a href="https://salawany.github.io/Agrofeira-salawany/">
+                AgroFeira
+            </a>
+        </p>
+
+        <ul>
+            <li>
+                <a href="catalogo-bootstrap.html">Catálogo com Bootstrap</a>
+            </li>
+            <li>
+                <a href="checkout-bootstrap.html">Formulário com Bootstrap</a>
+            </li>
+        </ul>
+
+        <section aria-labelledby="correcoes">
+            <h3 id="correcoes">1. As correções de acessibilidade</h3>
+
+            <p>
+                Esta tabela registra os problemas identificados durante a
+                análise do código, a forma como foram detectados, as
+                alterações realizadas e os locais em que elas foram aplicadas.
+            </p>
+
+            <table class="tabela-safra">
+                <caption>
+                    Registro das correções de acessibilidade
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Problema identificado</th>
+                        <th scope="col">Como foi detectado</th>
+                        <th scope="col">Correção realizada</th>
+                        <th scope="col">Local no código</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Primeira correção da atividade</th>
+                        <td>[Descreva o problema encontrado no passo 3.]</td>
+                        <td>[Descreva a alteração realizada.]</td>
+                        <td>[Informe o arquivo e o elemento.]</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Segunda correção da atividade</th>
+                        <td>[Descreva o problema encontrado no passo 4.]</td>
+                        <td>[Descreva a alteração realizada.]</td>
+                        <td>[Informe o arquivo e o elemento.]</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Terceira correção da atividade</th>
+                        <td>
+                            Foi verificada a associação entre os campos
+                            obrigatórios do formulário e suas mensagens.
+                        </td>
+                        <td>
+                            Foram utilizados identificadores nas mensagens
+                            e o atributo aria-describedby nos campos.
+                        </td>
+                        <td>
+                            checkout-bootstrap.html
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>Pendências identificadas</h4>
+
+            <ul>
+                <li>
+                    O foco do teclado permanece no botão após uma tentativa
+                    de envio com erros; conduzi-lo ao primeiro campo inválido
+                    exige JavaScript.
+                </li>
+                <li>
+                    O diálogo de detalhes foi implementado para o produto
+                    Açaí médio; exibir informações diferentes para cada
+                    produto exige adaptação do comportamento.
+                </li>
+                <li>
+                    A associação de aria-describedby mantém a descrição
+                    vinculada ao campo mesmo quando ele está válido.
+                </li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="registro">
+            <h3 id="registro">2. O registro de decisão</h3>
+
+            <h4>Contexto</h4>
+            <p>
+                A AgroFeira precisa definir como será feita a estilização
+                das próximas páginas e componentes. A escolha deve considerar
+                o trabalho de manutenção, a quantidade de código, o desempenho
+                e a acessibilidade. No comparativo da atividade anterior,
+                o CSS próprio apresentou [INSIRA O DADO MEDIDO], enquanto
+                o Bootstrap apresentou [INSIRA O DADO MEDIDO]. O arquivo
+                JavaScript do Bootstrap teve peso de [INSIRA O VALOR MEDIDO],
+                e os testes sem JavaScript mostraram limitações no menu,
+                no diálogo e na validação do formulário.
+            </p>
+
+            <h4>Opções consideradas</h4>
+            <ul>
+                <li>
+                    <strong>Folha de estilo autoral:</strong>
+                    permite maior controle sobre o visual e as classes
+                    utilizadas, mas exige escrever e manter mais regras CSS.
+                </li>
+                <li>
+                    <strong>Bootstrap:</strong>
+                    oferece componentes e estilos prontos, mas a interatividade
+                    de alguns componentes depende de JavaScript adicional.
+                </li>
+                <li>
+                    <strong>Tailwind CSS:</strong>
+                    utiliza classes utilitárias diretamente na marcação,
+                    oferecendo flexibilidade, mas pode aumentar a quantidade
+                    de classes no HTML.
+                </li>
+            </ul>
+
+            <h4>Decisão</h4>
+            <p>
+                [Escreva aqui qual das três opções você escolhe para a
+                continuidade da AgroFeira e explique sua decisão com base
+                nos dados que mediu. Se escolher Bootstrap, informe se
+                utilizará também o JavaScript ou somente o CSS.]
+            </p>
+
+            <h4>Consequências aceitas</h4>
+            <ul>
+                <li>
+                    [Registre um custo ou uma limitação que você aceita
+                    ao fazer sua escolha.]
+                </li>
+                <li>
+                    [Registre uma segunda consequência coerente com
+                    a opção escolhida.]
+                </li>
+            </ul>
+
+            <h4>O que me faria mudar de ideia</h4>
+            <p>
+                [Indique um fato que poderia levar você a reconsiderar
+                a decisão, como uma mudança nos resultados de desempenho,
+                um problema de manutenção ou uma limitação técnica.]
+            </p>
+
+            <h4>Fontes</h4>
+            <ul>
+                <li>
+                    Bootstrap. Documentação oficial, versão 5.3.
+                    Consulte a seção relacionada aos componentes e à
+                    utilização de JavaScript:
+                    <a href="https://getbootstrap.com/docs/5.3/">
+                        documentação do Bootstrap 5.3
+                    </a>.
+                </li>
+                <li>
+                    [Inclua uma obra da bibliografia da disciplina,
+                    com autor, título e capítulo ou tema consultado.]
+                </li>
+                <li>
+                    [Inclua a fonte oficial do Tailwind CSS utilizada
+                    na aula, com a página ou seção consultada.]
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="rodape-site">
+        <p>AgroFeira — valorizando os produtores locais.</p>
+    </footer>
+
+</body>
+</html>
