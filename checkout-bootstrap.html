@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fechar o pedido - AgroFeira</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="agrofeira-bootstrap.css">
+</head>
+<body>
+  <main class="container py-4">
+    <h1 class="h3 mb-4">Fechar o pedido</h1>
+
+    <form class="row g-3 needs-validation" novalidate>
+      <div class="col-12 col-md-6">
+        <label for="nome" class="form-label">Nome completo</label>
+        <input type="text" class="form-control" id="nome" name="nome" autocomplete="name" required aria-describedby="nome-erro">
+        <div class="invalid-feedback" id="nome-erro">
+          Informe seu nome completo.
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" class="form-control" id="email" name="email" autocomplete="email" required aria-describedby="email-erro">
+        <div class="invalid-feedback" id="email-erro">
+          Informe um e-mail válido.
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="termos" name="termos" required aria-describedby="termos-erro">
+          <label class="form-check-label" for="termos">
+            Aceito os termos do pedido
+          </label>
+          <div class="invalid-feedback" id="termos-erro">
+            Você precisa aceitar os termos do pedido.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Fazer pedido</button>
+      </div>
+       </form>
+  </main>
+
+  <script src="validacao.js" defer></script>
+</body>
+</html>
