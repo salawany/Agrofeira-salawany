@@ -24,3 +24,12 @@
   --bs-btn-active-bg: var(--cor-marca-forte);
   --bs-btn-active-border-color: var(--cor-marca-forte);
 }
+
+/* Campos de texto com contraste adequado */
+input.form-control,
+input.form-control:focus {
+  background-color: #FFFFFF !important;
+  color: #1F1F1F !important;
+  border: 1px solid #625B52;
+  opacity: 1;
+}
