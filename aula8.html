@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript na AgroFeira</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<a href="#conteudo" class="pular">Pular para o conteúdo</a>
+
+<header class="cabecalho-site">
+    <h1>AgroFeira</h1>
+
+    <nav aria-label="Principal">
+        <ul class="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="safra.html">Safra</a></li>
+            <li><a href="cadastro-produtor.html">Cadastro do produtor</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="conteudo">
+    <h2>JavaScript na AgroFeira</h2>
+
+    <p>As três formas de utilizar JavaScript são por meio de um arquivo externo, diretamente no HTML usando a tag script e em linha, dentro de um atributo da própria tag.</p>
+
+    <script src="js/aula8.js"></script>
+
+    <script>
+        console.log('Forma 2: interna, entre as tags script');
+    </script>
+
+    <button type="button" onclick="alert('Forma 3: em linha, dentro da tag')">
+        Forma 3
+    </button>
+</main>
+
+<footer class="rodape-site">
+    <p>AgroFeira — valorizando os produtores locais.</p>
+</footer>
+
+</body>
+</html>
