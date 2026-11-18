@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript na AgroFeira</title>
+    <title>JavaScript e React na AgroFeira</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,19 +31,101 @@
 </header>
 
 <main id="conteudo">
-    <h2>JavaScript na AgroFeira</h2>
+    <h2>JavaScript e React na AgroFeira</h2>
 
-    <p>As três formas de utilizar JavaScript são por meio de um arquivo externo, diretamente no HTML usando a tag script e em linha, dentro de um atributo da própria tag.</p>
+    <section>
+        <h3>Identificação</h3>
+        <p><strong>Nome:</strong> Sávila Lawany Leite de Sousa</p>
+        <p><strong>Matrícula:</strong> 2024008920</p>
+    </section>
 
-    <script src="js/aula8.js"></script>
+    <section>
+        <h3>JavaScript na AgroFeira</h3>
 
-    <script>
-        console.log('Forma 2: interna, entre as tags script');
-    </script>
+        <p>As três formas de utilizar JavaScript são por meio de um arquivo externo, diretamente no HTML usando a tag script e em linha, dentro de um atributo da própria tag.</p>
 
-    <button type="button" onclick="alert('Forma 3: em linha, dentro da tag')">
-        Forma 3
-    </button>
+        <script src="js/aula8.js"></script>
+
+        <script>
+            console.log('Forma 2: interna, entre as tags script');
+        </script>
+
+        <button type="button" onclick="alert('Forma 3: em linha, dentro da tag')">
+            Forma 3
+        </button>
+    </section>
+
+    <section>
+        <h3>Meus projetos</h3>
+
+        <ul>
+            <li>
+                <strong>Repositório AgroFeira:</strong>
+                <a href="https://github.com/salawany/Agrofeira-salawany" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
+            </li>
+            <li>
+                <strong>Site publicado:</strong>
+                <a href="https://salawany.github.io/Agrofeira-salawany/" target="_blank" rel="noopener noreferrer">
+                    AgroFeira
+                </a>
+            </li>
+            <li>
+                <strong>Projeto React — Jogo da Velha:</strong>
+                <a href="https://codesandbox.io/p/devbox/react-dev-forked-r7mq57?workspaceId=ws_QMUJDWP7rgi7vLy7PGTcao" target="_blank" rel="noopener noreferrer">
+                    Abrir no CodeSandbox
+                </a>
+            </li>
+            <li>
+                <strong>Projeto React — Catálogo AgroFeira:</strong>
+                <a href="https://codesandbox.io/p/devbox/react-dev-forked-6xdvn8?workspaceId=ws_QMUJDWP7rgi7vLy7PGTcao" target="_blank" rel="noopener noreferrer">
+                    Abrir no CodeSandbox
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Mensagens que encontrei</h3>
+
+        <p>Durante a realização da atividade, encontrei algumas mensagens de erro ao testar os códigos:</p>
+
+        <ul>
+            <li>
+                <strong>Parte A — JavaScript:</strong>
+                <code>Uncaught ReferenceError: naoExiste is not defined</code>
+            </li>
+            <li>
+                <strong>Etapa 10 — JSX:</strong>
+                <code>SyntaxError: /src/App.js: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment &lt;&gt;...&lt;/&gt;? (5:4)</code>
+            </li>
+            <li>
+                <strong>Etapa 14 — React:</strong>
+                <code>SyntaxError: /src/App.js: Identifier 'value' has already been declared. (3:18)</code>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>O que eu aprendi</h3>
+
+        <h4>1. Qual forma de utilizar JavaScript escolheria para um código de 200 linhas reutilizado em várias páginas?</h4>
+
+        <p>Eu escolheria utilizar um arquivo JavaScript externo, porque assim poderia criar o código uma única vez e chamá-lo nas páginas em que fosse necessário. Isso evita repetir o mesmo código em vários arquivos HTML e facilita futuras alterações.</p>
+
+        <h4>2. Como um componente React ajuda a organizar a repetição de produtos?</h4>
+
+        <p>Um componente React ajuda a evitar a repetição de código, pois permite criar uma estrutura que pode ser reutilizada para vários produtos. No catálogo da AgroFeira, criamos o componente Produto e utilizamos propriedades para passar o nome de cada item. Dessa forma, conseguimos organizar melhor o código e facilitar alterações futuras.</p>
+
+        <h4>3. Por que os outros botões não mudavam quando um produto era clicado?</h4>
+
+        <p>Isso acontece porque utilizamos o useState, que permite controlar o estado de cada botão individualmente. Cada produto possui seu próprio estado, então, quando clicamos no botão do Açaí, somente ele muda para “No carrinho”, enquanto os outros continuam como “Adicionar”.</p>
+
+        <h4>4. Depois de trabalhar com CSS no React, você mudaria sua escolha de ferramenta de estilização?</h4>
+
+        <p>Continuo escolhendo o CSS tradicional, já estou familiarizada com ele e considero sua utilização simples. Mudar para outra ferramenta nesse momento seria mais complicado, eu precisaria aprender como ela funciona antes de utilizá-la com confiança.</p>
+    </section>
 </main>
 
 <footer class="rodape-site">
